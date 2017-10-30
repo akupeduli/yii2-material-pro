@@ -20,17 +20,15 @@
     "prefer-stable": true,
     "require": {
         "php": ">=5.6.0",
-        "yiisoft/yii2": ">=2.0.0"
-    },
-    "require-dev": {
-        "ccampbell/chromephp": "~4.1"
+        "yiisoft/yii2": ">=2.0.0",
+        "mimicreative/yii2-datatables": "dev-metronic-support"
     },
     "extra": {
-        "bootstrap": "akupeduli\\metronic\\Bootstrap"
+        "bootstrap": "akupeduli\\material\\Bootstrap"
     },
     "autoload": {
         "psr-4": {
-            "akupeduli\\metronic\\": "src/"
+            "akupeduli\\material\\": "src/"
         }
     }
 }
