@@ -81,14 +81,6 @@ $(function () {
     $(".search-box a, .search-box .app-search .srh-btn").on('click', function () {
         $(".app-search").toggle(200);
     });
-    // ============================================================== 
-    // Right sidebar options
-    // ============================================================== 
-    $(".right-side-toggle").click(function () {
-        $(".right-sidebar").slideDown(50);
-        $(".right-sidebar").toggleClass("shw-rside");
-
-    });
 
     // ============================================================== 
     //tooltip
