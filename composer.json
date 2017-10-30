@@ -1,0 +1,36 @@
+{
+    "name": "akupeduli/yii2-material-pro",
+    "description": "Yii2 Material Pro admin template integration",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "L Shaf",
+            "email": "shafry2008@gmail.com",
+            "role": "Core Developer"
+        }
+    ],
+    "keywords": [
+        "yii2",
+        "template",
+        "material",
+        "material-pro"
+    ],
+    "type": "yii2-extension",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.6.0",
+        "yiisoft/yii2": ">=2.0.0"
+    },
+    "require-dev": {
+        "ccampbell/chromephp": "~4.1"
+    },
+    "extra": {
+        "bootstrap": "akupeduli\\metronic\\Bootstrap"
+    },
+    "autoload": {
+        "psr-4": {
+            "akupeduli\\metronic\\": "src/"
+        }
+    }
+}
