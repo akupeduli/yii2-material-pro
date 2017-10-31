@@ -14,6 +14,9 @@ class MaterialAsset extends AssetBundle
     public $js = [
         "js/custom.js"
     ];
+    public $css = [
+        "css/style.css"
+    ];
     public $depends = [
         "akupeduli\\material\\assets\\core\\MainAsset",
         "akupeduli\\material\\assets\\plugins\\StickyKitAsset"
