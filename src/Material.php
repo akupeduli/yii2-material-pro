@@ -33,6 +33,7 @@ class Material extends Component
     public $assetSourcePath;
     public $assetBundleClass;
     
+    public $sidebarConfig;
     public $template = self::TEMPLATE_DEFAULT;
     public $theme = self::THEME_DEFAULT;
     
