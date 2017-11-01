@@ -12,7 +12,6 @@ use yii\web\AssetBundle;
 class MainAsset extends AssetBundle
 {
     public $publishOptions = [
-        'forceCopy' => (YII_ENV == YII_ENV_DEV),
         "except" => [
             "*.html", "*.scss", "*.cfg", "*.config",
             "*.less"
