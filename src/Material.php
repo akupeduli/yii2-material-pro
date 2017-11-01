@@ -30,10 +30,14 @@ class Material extends Component
     const THEME_PURPLE = "purple";
     const THEME_PURPLE_DARK = "purple-dark";
     
+    /* must be filled */
     public $assetSourcePath;
     public $assetBundleClass;
     
+    /* you can only use one of parameter below */
+    public $sidebarFile;
     public $sidebarConfig;
+    
     public $template = self::TEMPLATE_DEFAULT;
     public $theme = self::THEME_DEFAULT;
     

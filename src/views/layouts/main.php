@@ -204,7 +204,13 @@ $material->sidebarConfig = require(Yii::getAlias("@akupeduli/material/config/sid
         <!-- ============================================================== -->
         <!-- End Topbar header -->
         <!-- ============================================================== -->
-        <?= $material->sidebarConfig ? Sidebar::widget($material->sidebarConfig) : "" ?>
+        <?php
+            if ($material->sidebarConfig and is_null($material->sidebarFile)) {
+                echo Sidebar::widget($material->sidebarConfig);
+            } else if ($material->sidebarFile) {
+                echo $this->render($material->sidebarFile);
+            }
+        ?>
         <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Container fluid  -->
