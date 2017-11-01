@@ -4,3 +4,6 @@
 .user-profile .profile-text {
     padding-bottom: 0;
 }
+.no-footer .scroll-sidebar {
+    padding-bottom: 0;
+}

@@ -20,9 +20,15 @@ class Sidebar extends Widget
 
     public function run()
     {
-        echo Html::beginTag("aside", [
-            "class" => "left-sidebar"
-        ]);
+        $optionAside = [
+            "class" => ["left-sidebar"]
+        ];
+        
+        if (is_null($this->footer)) {
+            $optionAside["class"][] = "no-footer";
+        }
+        
+        echo Html::beginTag("aside", $optionAside);
         if (!is_null($this->profile) or !is_null($this->menu)) {
             echo Html::beginTag("div", [
                 "class" => "scroll-sidebar"
