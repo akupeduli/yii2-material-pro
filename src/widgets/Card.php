@@ -61,7 +61,7 @@ class Card extends Widget
         echo Html::endTag("div");
     }
     
-    public function bodyTitle($title, $options)
+    public function bodyTitle($title, $options = [])
     {
         $defaultOptions = [ "class" => "card-title" ];
         $tag = ArrayHelper::remove($options, "tag", "h4");
@@ -69,7 +69,7 @@ class Card extends Widget
         return Html::tag($tag, $title, $options);
     }
     
-    public function bodySubtitle($title, $options)
+    public function bodySubtitle($title, $options = [])
     {
         $defaultOptions = [ "class" => "card-subtitle" ];
         $tag = ArrayHelper::remove($options, "tag", "h6");
@@ -77,7 +77,7 @@ class Card extends Widget
         return Html::tag($tag, $title, $options);
     }
     
-    public function bodyText($text, $options)
+    public function bodyText($text, $options = [])
     {
         $defaultOptions = [ "class" => "card-text" ];
         $tag = ArrayHelper::remove($options, "tag", "p");
