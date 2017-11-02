@@ -10,3 +10,6 @@
 .single-column .footer {
     left: 0;
 }
+.container-fluid.no-title {
+    padding-top: 30px;
+}
