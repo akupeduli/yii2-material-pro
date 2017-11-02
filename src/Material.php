@@ -3,6 +3,7 @@
 namespace akupeduli\material;
 
 use yii\base\Component;
+use yii\web\AssetBundle;
 use yii\base\InvalidConfigException;
 
 /**
@@ -34,9 +35,12 @@ class Material extends Component
     public $assetSourcePath;
     public $assetBundleClass;
     
-    /* you can only use one of parameter below */
-    public $sidebarFile;
+    /**
+     * @var string | array $sidebarConfig
+     * @note if $sidebarConfig is string, will be read as path and require it
+     */
     public $sidebarConfig;
+    public $sidebarFile;
     
     public $navbarFile;
     
