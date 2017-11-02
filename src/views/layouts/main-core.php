@@ -7,8 +7,6 @@ use akupeduli\material\widgets\Sidebar;
 $this->beginContent(__DIR__ . '/base.php');
 $image = ImageAsset::register($this);
 $material = Material::getComponent();
-$material->sidebarConfig = require(Yii::getAlias("@akupeduli/material/config/sidebar.php"));
-$material->navbarFile = "@akupeduli/material/views/samples/navbar";
 ?>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
