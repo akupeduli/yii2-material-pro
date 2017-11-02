@@ -7,3 +7,6 @@
 .no-footer .scroll-sidebar {
     padding-bottom: 0;
 }
+.single-column .footer {
+    left: 0;
+}
