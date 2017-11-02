@@ -69,7 +69,7 @@ class Card extends Widget
         $defaultOptions = [ "class" => "card-text" ];
         $tag = ArrayHelper::remove($options, "tag", "p");
         $options = ArrayHelper::merge($defaultOptions, $options);
-        return Html::tag($tag, $text, $options)
+        return Html::tag($tag, $text, $options);
     }
     
     private function _renderHeader()
