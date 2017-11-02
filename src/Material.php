@@ -46,6 +46,13 @@ class Material extends Component
     public $template = self::TEMPLATE_DEFAULT;
     public $theme = self::THEME_DEFAULT;
     
+    public function init()
+    {
+        if (is_string($this->sidebarConfig)) {
+            $this->sidebarConfig = require (\Yii::getAlias($this->sidebarConfig));
+        }
+    }
+    
     public static function getComponent()
     {
         try {

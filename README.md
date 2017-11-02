@@ -16,7 +16,8 @@ return [
             'class'            => Material::className(),
             'assetSourcePath'  => '@common/../../material-pro',
             'assetBundleClass' => MaterialAsset::className(),
-            'sidebarConfig'    => require(\Yii::getAlias("@akupeduli/material/config/sidebar.php")),
+            /** if sidebarConfig is string, will read as path file **/
+            'sidebarConfig'    => "@akupeduli/material/config/sidebar.php",
             'navbarFile'       => "@akupeduli/material/views/samples/navbar"
         ],
     ],
