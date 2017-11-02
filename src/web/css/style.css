@@ -13,3 +13,20 @@
 .container-fluid.no-title {
     padding-top: 30px;
 }
+
+/* Data Table custom */
+.dataTables_wrapper {
+    position: relative;
+}
+.dataTables_processing {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eef5f9;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #DCDCDC;
+    width: 250px;
+}
