@@ -50,12 +50,14 @@ class Card extends Widget
             echo $this->_renderHeader();
         }
         
-        echo Html::endTag("div");
         echo Html::beginTag("div", [ "class" => "card-body" ]);
     }
     
     public function run()
     {
+        // close tag card body
+        echo Html::endTag("div");
+        //close tag card
         echo Html::endTag("div");
     }
     
