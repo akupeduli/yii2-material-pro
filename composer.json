@@ -1,34 +1,42 @@
 {
-    "name": "akupeduli/yii2-material-pro",
-    "description": "Yii2 Material Pro admin template integration",
-    "license": "MIT License",
-    "authors": [
-        {
-            "name": "L Shaf",
-            "email": "shafry2008@gmail.com",
-            "role": "Core Developer"
-        }
-    ],
-    "keywords": [
-        "yii2",
-        "template",
-        "material",
-        "material-pro"
-    ],
-    "type": "yii2-extension",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "php": ">=5.6.0",
-        "yiisoft/yii2": ">=2.0.0",
-        "mimicreative/yii2-datatables": "dev-metronic-support"
-    },
-    "extra": {
-        "bootstrap": "akupeduli\\material\\Bootstrap"
-    },
-    "autoload": {
-        "psr-4": {
-            "akupeduli\\material\\": "src/"
-        }
+  "name": "akupeduli/yii2-material-pro",
+  "description": "Yii2 Material Pro admin template integration",
+  "license": "MIT License",
+  "authors": [
+    {
+      "name": "L Shaf",
+      "email": "shafry2008@gmail.com",
+      "role": "Core Developer"
     }
+  ],
+  "keywords": [
+    "yii2",
+    "template",
+    "material",
+    "material-pro"
+  ],
+  "type": "yii2-extension",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.6.0",
+    "yiisoft/yii2": ">=2.0.0",
+    "mimicreative/yii2-datatables": "dev-metronic-support",
+    "bower-asset/bootstrap": "~4.0.0@beta",
+    "yiisoft/yii2-bootstrap": "~2.1.0@dev"
+  },
+  "extra": {
+    "bootstrap": "akupeduli\\material\\Bootstrap"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "akupeduli\\material\\": "src/"
+    }
+  }
 }
