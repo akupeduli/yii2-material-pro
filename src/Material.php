@@ -38,6 +38,11 @@ class Material extends Component
     public $sidebarFile;
     public $sidebarConfig;
     
+    public $navbarFile;
+    
+    public $fixHeader = true;
+    public $fixSidebar = false;
+    
     public $template = self::TEMPLATE_DEFAULT;
     public $theme = self::THEME_DEFAULT;
     
