@@ -13,12 +13,12 @@ use akupeduli\material\assets\MaterialAsset;
 return [
     "components" => [
         Material::$componentName => [
-			'class'            => Material::className(),
-			'assetSourcePath'  => '@common/../../material-pro',
-			'assetBundleClass' => MaterialAsset::className(),
-			'sidebarConfig'    => require(\Yii::getAlias("@akupeduli/material/config/sidebar.php")),
-			'navbarFile'       => "@akupeduli/material/views/samples/navbar"
-		],
-	],
+            'class'            => Material::className(),
+            'assetSourcePath'  => '@common/../../material-pro',
+            'assetBundleClass' => MaterialAsset::className(),
+            'sidebarConfig'    => require(\Yii::getAlias("@akupeduli/material/config/sidebar.php")),
+            'navbarFile'       => "@akupeduli/material/views/samples/navbar"
+        ],
+    ],
 ]
 ```
