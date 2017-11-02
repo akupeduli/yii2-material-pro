@@ -69,6 +69,14 @@ class Card extends Widget
         return Html::tag($tag, $title, $options);
     }
     
+    public function bodySubtitle($title, $options)
+    {
+        $defaultOptions = [ "class" => "card-subtitle" ];
+        $tag = ArrayHelper::remove($options, "tag", "h6");
+        $options = ArrayHelper::merge($defaultOptions, $options);
+        return Html::tag($tag, $title, $options);
+    }
+    
     public function bodyText($text, $options)
     {
         $defaultOptions = [ "class" => "card-text" ];
