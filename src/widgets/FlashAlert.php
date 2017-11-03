@@ -36,27 +36,27 @@ class FlashAlert extends Widget
         'error' => [
             'class' => 'alert-danger',
             'headClass' => 'text-danger',
-            'icon' => '<i class="fa fa-ban"></i>',
+            'icon' => '<i class="fa fa-times-circle"></i>',
         ],
         'danger' => [
             'class' => 'alert-danger',
             'headClass' => 'text-danger',
-            'icon' => '<i class="fa fa-ban"></i>',
+            'icon' => '<i class="fa fa-times-circle"></i>',
         ],
         'success' => [
             'class' => 'alert-success',
             'headClass' => 'text-success',
-            'icon' => '<i class="fa fa-check"></i>',
+            'icon' => '<i class="fa fa-check-circle"></i>',
         ],
         'info' => [
             'class' => 'alert-info',
             'headClass' => 'text-info',
-            'icon' => '<i class="fa fa-info"></i>',
+            'icon' => '<i class="fa fa-info-circle"></i>',
         ],
         'warning' => [
             'class' => 'alert-warning',
             'headClass' => 'text-warning',
-            'icon' => '<i class="fa fa-warning"></i>',
+            'icon' => '<i class="fa fa-exclamation-circle"></i>',
         ],
     ];
     
@@ -87,17 +87,13 @@ class FlashAlert extends Widget
             if (isset($this->alertTypes[$type])) {
                 $data = (array) $data;
                 foreach ($data as $message) {
-                    
-                    $alertData = $this->alertTypes[$type];
-                    $headTitle = $alertData['icon'] . " " . ucwords($type);
-                    $headTitle = Html::tag("h3", $headTitle, [ "class" => $alertData["headClass"] ]);
-    
                     $options = $this->options;
+                    $alertData = $this->alertTypes[$type];
                     $options['id'] = $this->getId() . '-' . $type;
-                    Html::addCssClass($options, $alertData['class']);
+                    Html::addCssClass($options, [$alertData['class'], "alert-rounded"]);
                     
                     echo Alert::widget([
-                        'body' => $headTitle . $message,
+                        'body' => $alertData['icon'] . " " . $message,
                         'closeButton' => $this->closeButton,
                         'options' => $options,
                     ]);
