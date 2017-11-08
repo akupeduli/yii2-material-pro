@@ -30,3 +30,9 @@
     border: 1px solid #DCDCDC;
     width: 250px;
 }
+.compact {
+    font-size: 12px;
+}
+.table.compact th, .table.compact td {
+    padding: 1px;
+}
