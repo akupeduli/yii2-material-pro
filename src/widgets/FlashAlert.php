@@ -65,7 +65,6 @@ class FlashAlert extends Widget
      */
     public $closeButton = [];
     
-    
     /**
      * @var boolean whether to removed flash messages during AJAX requests
      */
@@ -90,7 +89,7 @@ class FlashAlert extends Widget
                     $options = $this->options;
                     $alertData = $this->alertTypes[$type];
                     $options['id'] = $this->getId() . '-' . $type;
-                    Html::addCssClass($options, [$alertData['class'], "alert-rounded"]);
+                    Html::addCssClass($options, $alertData['class']);
                     
                     echo Alert::widget([
                         'body' => $alertData['icon'] . " " . $message,
