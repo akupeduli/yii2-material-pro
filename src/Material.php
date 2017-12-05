@@ -52,9 +52,6 @@ class Material extends Component
     
     public function init()
     {
-        if (is_string($this->sidebarConfig)) {
-            $this->sidebarConfig = require (\Yii::getAlias($this->sidebarConfig));
-        }
     }
     
     public static function getComponent()

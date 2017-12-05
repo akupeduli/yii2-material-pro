@@ -25,7 +25,7 @@ $material = Material::getComponent();
                 echo $this->render($material->navbarFile);
             }
             if ($material->sidebarConfig and is_null($material->sidebarFile)) {
-                echo Sidebar::widget($material->sidebarConfig);
+                echo Sidebar::widget(require($material->sidebarConfig));
             } else if ($material->sidebarFile) {
                 echo $this->render($material->sidebarFile);
             }
