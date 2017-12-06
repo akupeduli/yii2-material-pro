@@ -111,7 +111,8 @@ class SidebarMenu extends Menu
     
     private function _isDivider($item)
     {
-        return (isset($item[0]) and $item[0] === "divider");
+        $label = ArrayHelper::getValue($item, "label", null);
+        return $label === "divider";
     }
     
     private function _formatLinkAttr($item)
