@@ -39,7 +39,7 @@ class SidebarMenu extends Menu
             $tag = ArrayHelper::remove($options, 'tag', 'li');
             $item["level"] = $level;
             $class = [];
-
+            
             if ($i === 0 && $this->firstItemCssClass !== null) {
                 $class[] = $this->firstItemCssClass;
             }
@@ -48,18 +48,17 @@ class SidebarMenu extends Menu
                 $class[] = $this->activeCssClass;
             }
             
-            if ($this->_isHeading($item)) {
-                $class[] = $this->headingClass;
-            }
-    
+            
             if ($this->_isDivider($item)) {
                 $class[] = $this->dividerClass;
+            } else if ($this->_isHeading($item)) {
+                $class[] = $this->headingClass;
             }
             
             if (!empty($class)) {
                 Html::addCssClass($options, implode(' ', $class));
             }
-        
+            
             $menu = $this->renderItem($item);
             if (!empty($item['items'])) {
                 $menu .= strtr($this->submenuTemplate, [
@@ -68,23 +67,21 @@ class SidebarMenu extends Menu
             }
             $lines[] = Html::tag($tag, $menu, $options);
         }
-    
+        
         return implode("\n", $lines);
     }
     
     protected function renderItem($item)
     {
-        if ($this->_isHeading($item)) {
+        if ($this->_isDivider($item)) {
+            return "";
+        } else if ($this->_isHeading($item)) {
             $template = ArrayHelper::getValue($item, "template", $this->labelTemplate);
             return strtr($template, [
                 "{label}" => ArrayHelper::getValue($item, "label", "")
             ]);
         }
         
-        if ($this->_isDivider($item)) {
-            return "";
-        }
-    
         $template = ArrayHelper::getValue($item, "template", $this->linkTemplate);
         $label = ArrayHelper::remove($item, "label", "");
         $icon = ArrayHelper::remove($item, "icon", "");
@@ -134,14 +131,14 @@ class SidebarMenu extends Menu
         if (isset($item["class"])) {
             Html::addCssClass($options, $item["class"]);
         }
-    
+        
         if (!empty($item['items'])) {
             Html::addCssClass($options, "has-arrow");
             $options['href'] = 'javascript:void(0);';
         } else {
             $options['href'] = Url::to($options['href']);
         }
-    
+        
         return Html::renderTagAttributes($options);
     }
     
@@ -151,7 +148,7 @@ class SidebarMenu extends Menu
         $defaultOptions = [
             "id" => "sidebarnav"
         ];
-    
+        
         $this->options = ArrayHelper::merge($defaultOptions, $options);
     }
 }

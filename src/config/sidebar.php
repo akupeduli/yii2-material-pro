@@ -19,12 +19,12 @@ return [
                 "label" => '<i class="ti-email"></i> Inbox',
                 "url" => ["/"]
             ],
-            [ "divider" ],
+            [ "label" => "divider" ],
             [
                 "label" => '<i class="ti-settings"></i> Account Setting',
                 "url" => ["/"]
             ],
-            [ "divider" ],
+            [ "label" => "divider" ],
             [
                 "label" => '<i class="fa fa-power-off"></i> Logout',
                 "url" => ["/"]
@@ -70,7 +70,7 @@ return [
                     ],
                 ]
             ],
-            [ "divider" ],
+            [ "label" => "divider" ],
             [ "label" => "Form and Other" ],
             [
                 "label" => "Form",
